@@ -1,4 +1,4 @@
-print("Selamat datang di Book Store")
+print("Selamat datang di Store Book")
 print("1. Novel")
 print("2. Komik")
 print("3. Biografi")
