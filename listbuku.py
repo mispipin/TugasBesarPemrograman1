@@ -149,3 +149,19 @@ elif pilihmenu == '3':
         belibuku = input("Input Y (beli) dan N (kembali): ")
     else:
         print("Masukan inputan dengan benar!")
+elif pilihmenu == '4':
+    print("Pencarian Buku")
+    cari_buku = input("Masukkan judul atau pengarang buku yang ingin dicari: ")
+    
+    hasil_pencarian = []
+    for i in range(len(judul)):
+        if cari_buku.lower() in judul[i].lower() or cari_buku.lower() in pengarang[i].lower():
+            hasil_pencarian.append(i)
+    
+    if len(hasil_pencarian) > 0:
+        print("Hasil Pencarian:")
+        for i in hasil_pencarian:
+            print(f"{i+1}. {judul[i]} - {pengarang[i]} (Rp {harga[i]})")
+            belibuku = input("Input Y (beli) dan N (kembali): ")
+    else:
+        print("Buku tidak ditemukan")
