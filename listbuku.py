@@ -165,3 +165,17 @@ elif pilihmenu == '4':
             belibuku = input("Input Y (beli) dan N (kembali): ")
     else:
         print("Buku tidak ditemukan")
+def transaksi_cashless():
+    
+    total_harga = int(input("Masukkan total harga barang: "))
+    uang_diberikan = int(input("Masukkan jumlah uang yang diberikan: "))
+    
+    if uang_diberikan < total_harga:
+        print("Uang yang diberikan tidak cukup.")
+    elif uang_diberikan == total_harga:
+        print("Uang yang diberikan pas.")
+    else:
+        kembalian = uang_diberikan - total_harga
+        print(f"Uang Kembalian: {kembalian:.2f}")
+
+transaksi_cashless()
