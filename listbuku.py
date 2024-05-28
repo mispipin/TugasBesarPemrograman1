@@ -165,6 +165,27 @@ elif pilihmenu == '4':
             belibuku = input("Input Y (beli) dan N (kembali): ")
     else:
         print("Buku tidak ditemukan")
+
+print("==============================")
+print("          Store Book          ")
+print("==============================")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("        Struk Pembelian       ")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+
+pembelian = []
+if pilihmenu in ['1', '2', '3', '4']:
+    if 'pilihbuku' in locals():
+        if belibuku.lower() == 'y':
+           pembelian.append({f"Judul": judul[int(pilihbuku)-1], "Pengarang": pengarang[int(pilihbuku)-1], "Harga": harga[int(pilihbuku)-1]})
+            
+print("Rincian Pembelian:")
+total_harga = 0
+for index, item in enumerate(pembelian):
+    print(f"Judul      : {item['Judul']}")
+    print(f"Pengarang  : {item['Pengarang']}")
+    print(f"Harga      : {item['Harga']}")
+    total_harga += int(item['Harga'].replace("Rp. ", "").replace(".", ""))
 def transaksi_cashless():
     
     total_harga = int(input("Masukkan total harga barang: "))
@@ -179,3 +200,7 @@ def transaksi_cashless():
         print(f"Uang Kembalian: {kembalian:.2f}")
 
 transaksi_cashless()
+
+print(f"Total Harga: Rp {total_harga}")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+print("Terima kasih sudah berbelanja ")
