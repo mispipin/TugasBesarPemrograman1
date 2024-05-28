@@ -186,10 +186,11 @@ for index, item in enumerate(pembelian):
     print(f"Pengarang  : {item['Pengarang']}")
     print(f"Harga      : {item['Harga']}")
     total_harga += int(item['Harga'].replace("Rp. ", "").replace(".", ""))
+        
 def transaksi_cashless():
     
-    total_harga = int(input("Masukkan total harga barang: "))
-    uang_diberikan = int(input("Masukkan jumlah uang yang diberikan: "))
+    total_harga = int(input("Total harga barang: "))
+    uang_diberikan = int(input("Jumlah uang yang diberikan: "))
     
     if uang_diberikan < total_harga:
         print("Uang yang diberikan tidak cukup.")
