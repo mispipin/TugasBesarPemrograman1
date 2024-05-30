@@ -29,12 +29,14 @@ if pilihmenu == '1':
     
     pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
     if pilihbuku == '1':
+        buku = '0'
         print(f"Buku        : {judul[0]}")
         print(f"Pengarang   : {pengarang[0]}")
         print(f"Harga       : Rp {harga[0]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
     elif pilihbuku =="2":
+        buku = '1'
         print(f"Buku        : {judul[1]}")
         print(f"Pengarang   : {pengarang[1]}")
         print(f"Harga       : Rp {harga[1]}")
@@ -42,6 +44,7 @@ if pilihmenu == '1':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="3":
+        buku = '2'
         print(f"Buku        : {judul[2]}")
         print(f"Pengarang   : {pengarang[2]}")
         print(f"Harga       : Rp {harga[2]}")
@@ -49,6 +52,7 @@ if pilihmenu == '1':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="4":
+        buku = '3'
         print(f"Buku        : {judul[3]}")
         print(f"Pengarang   : {pengarang[3]}")
         print(f"Harga       : Rp {harga[3]}")
@@ -56,6 +60,7 @@ if pilihmenu == '1':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="5":
+        buku = '4'
         print(f"Buku        : {judul[4]}")
         print(f"Pengarang   : {pengarang[4]}")
         print(f"Harga       : Rp {harga[4]}")
@@ -74,12 +79,14 @@ elif pilihmenu == '2':
     
     pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
     if pilihbuku == '1':
+        buku = '5'
         print(f"Buku        : {judul[5]}")
         print(f"Pengarang   : {pengarang[5]}")
         print(f"Harga       : Rp {harga[5]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
     elif pilihbuku =="2":
+        buku = '6'
         print(f"Buku        : {judul[6]}")
         print(f"Pengarang   : {pengarang[6]}")
         print(f"Harga       : Rp {harga[6]}")
@@ -87,6 +94,7 @@ elif pilihmenu == '2':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="3":
+        buku = '7'
         print(f"Buku        : {judul[7]}")
         print(f"Pengarang   : {pengarang[7]}")
         print(f"Harga       : Rp {harga[7]}")
@@ -94,6 +102,7 @@ elif pilihmenu == '2':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="4":
+        buku = '8'
         print(f"Buku        : {judul[8]}")
         print(f"Pengarang   : {pengarang[8]}")
         print(f"Harga       : Rp {harga[8]}")
@@ -101,6 +110,7 @@ elif pilihmenu == '2':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="5":
+        buku = '9'
         print(f"Buku        : {judul[9]}")
         print(f"Pengarang   : {pengarang[9]}")
         print(f"Harga       : Rp {harga[9]}")
@@ -118,12 +128,14 @@ elif pilihmenu == '3':
     
     pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
     if pilihbuku == '1':
+        buku = '10'
         print(f"Buku        : {judul[10]}")
         print(f"Pengarang   : {pengarang[10]}")
         print(f"Harga       : Rp {harga[10]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
     elif pilihbuku =="2":
+        buku = '11'
         print(f"Buku        : {judul[11]}")
         print(f"Pengarang   : {pengarang[11]}")
         print(f"Harga       : Rp {harga[11]}")
@@ -131,6 +143,7 @@ elif pilihmenu == '3':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="3":
+        buku = '12'
         print(f"Buku        : {judul[12]}")
         print(f"Pengarang   : {pengarang[12]}")
         print(f"Harga       : Rp {harga[12]}")
@@ -138,6 +151,7 @@ elif pilihmenu == '3':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="4":
+        buku = '13'
         print(f"Buku        : {judul[13]}")
         print(f"Pengarang   : {pengarang[13]}")
         print(f"Harga       : Rp {harga[13]}")
@@ -145,6 +159,7 @@ elif pilihmenu == '3':
         belibuku = input("Input Y (beli) dan N (kembali): ")
         
     elif pilihbuku =="5":
+        buku = '14'
         print(f"Buku        : {judul[14]}")
         print(f"Pengarang   : {pengarang[14]}")
         print(f"Harga       : Rp {harga[14]}")
@@ -173,13 +188,13 @@ pembelian = []
 if pilihmenu in ['1', '2', '3', '4']:
     if 'pilihbuku' in locals():
         if belibuku.lower() == 'y':
-           pembelian.append({f"Judul": judul[int(pilihbuku)-1], "Pengarang": pengarang[int(pilihbuku)-1], "Harga": harga[int(pilihbuku)-1]})
+           pembelian.append({f"Judul": judul[int(buku)], "Pengarang": pengarang[int(buku)], "Harga": harga[int(buku)]})
         elif belibuku.lower() == 'n':
             sys.exit()
         else:
             sys.exit("hanya masukan y/n")
 
-            
+
     jumlah_barang = int(input("masukkan jumlah barang yang dibeli: "))
     print("")
     print("")
