@@ -1,3 +1,6 @@
+import sys
+
+
 print("Selamat datang di Store Book")
 print("1. Novel")
 print("2. Komik")
@@ -166,42 +169,77 @@ elif pilihmenu == '4':
     else:
         print("Buku tidak ditemukan")
 
-print("==============================")
-print("          Store Book          ")
-print("==============================")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print("        Struk Pembelian       ")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
-
 pembelian = []
 if pilihmenu in ['1', '2', '3', '4']:
     if 'pilihbuku' in locals():
         if belibuku.lower() == 'y':
            pembelian.append({f"Judul": judul[int(pilihbuku)-1], "Pengarang": pengarang[int(pilihbuku)-1], "Harga": harga[int(pilihbuku)-1]})
+        elif belibuku.lower() == 'n':
+            sys.exit()
+        else:
+            sys.exit("hanya masukan y/n")
+
+            
+    jumlah_barang = int(input("masukkan jumlah barang yang dibeli: "))
+    print("")
+    print("")
+    print("")
+    print("==============================")
+    print("          Store Book          ")
+    print("==============================")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("        Struk Pembelian       ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+
+
+            
             
 print("Rincian Pembelian:")
 total_harga = 0
 for index, item in enumerate(pembelian):
     print(f"Judul      : {item['Judul']}")
     print(f"Pengarang  : {item['Pengarang']}")
-    print(f"Harga      : {item['Harga']}")
     total_harga += int(item['Harga'].replace("Rp. ", "").replace(".", ""))
+    print(f"Harga      : {total_harga}")
+    print("")
+    print(f"Jumlah barang: {jumlah_barang}")
+
         
-def transaksi_cashless():
-    
-    total_harga = int(input("Total harga barang: "))
+def transaksi_tunai():
+
+    totalHarga = jumlah_barang * total_harga
+    print(f"Total Harga: Rp {totalHarga:.2f}")
     uang_diberikan = int(input("Jumlah uang yang diberikan: "))
     
-    if uang_diberikan < total_harga:
+    if uang_diberikan < totalHarga:
         print("Uang yang diberikan tidak cukup.")
-    elif uang_diberikan == total_harga:
+    elif uang_diberikan == totalHarga:
         print("Uang yang diberikan pas.")
     else:
-        kembalian = uang_diberikan - total_harga
-        print(f"Uang Kembalian: {kembalian:.2f}")
+        kembalian = uang_diberikan - totalHarga
+        
 
-transaksi_cashless()
+    print(f"Uang Kembalian: {kembalian:.2f}")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+    print("Terima kasih sudah berbelanja \n")
 
-print(f"Total Harga: Rp {total_harga}")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
-print("Terima kasih sudah berbelanja ")
+def transaksi_cashless():
+    totalHarga = jumlah_barang * total_harga
+    
+    print(f"Total Harga: Rp {totalHarga}\n")
+    print("Mohon Transfer ke nomor rekening berikut")
+    print("BCA-3565559444 a/n Kelvin Ferdinan\n")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+    print("Terima kasih sudah berbelanja \n")
+
+def bayar():
+    tunai = input("Pembayaran: ")
+    if tunai == "Tunai":
+        transaksi_tunai()
+    elif tunai == "Non-Tunai":
+        transaksi_cashless()
+    else:
+        print("mohon ketik 1 untuk transaksi tunai\n mohon ketik 2 untuk transaksi Non-Tunai")
+
+bayar()
+
