@@ -1,13 +1,13 @@
 import sys
 
 
-print("Selamat datang di Store Book")
+print("Selamat datang di STOREBOOK")
 print("1. Novel")
 print("2. Komik")
 print("3. Biografi")
 print("4. Search")
 
-pilihmenu = input("Inputkan nomor yang anda butuhkan: ")
+pilihmenu = input("Masukkan jenis Buku yang anda cari: ")
 
 judul =["Hello,Cello","Malioboro at Midnight","Kota Para Pecundang","Rumah untuk Alie","Kata Sandi",
         "Death Note Short Stories","Akasha Record of Ragnarok 06","One Piece 98","Blue Lock 01","Tokyo Revengers 01",
@@ -27,7 +27,7 @@ if pilihmenu == '1':
     print(f"4. {judul[3]}")
     print(f"5. {judul[4]}")
     
-    pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
+    pilihbuku = input("Masukkan judul Buku yang anda cari: ")
     if pilihbuku == '1':
         buku = '0'
         print(f"Buku        : {judul[0]}")
@@ -67,7 +67,7 @@ if pilihmenu == '1':
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
     else:
-        print("Masukan inputan dengan benar!")
+        print("Masukkan judul Buku dengan benar!")
 
 elif pilihmenu == '2':
     print("Komik yang tersedia")
@@ -77,7 +77,7 @@ elif pilihmenu == '2':
     print(f"4. {judul[8]}")
     print(f"5. {judul[9]}")
     
-    pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
+    pilihbuku = input("Masukkan judul Buku yang anda cari: ")
     if pilihbuku == '1':
         buku = '5'
         print(f"Buku        : {judul[5]}")
@@ -117,7 +117,7 @@ elif pilihmenu == '2':
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
     else:
-        print("Masukan inputan dengan benar!")
+        print("Masukkan judul Buku dengan benar!")
 elif pilihmenu == '3':
     print("Buku Biografi yang tersedia")
     print(f"1. {judul[10]}")
@@ -126,7 +126,7 @@ elif pilihmenu == '3':
     print(f"4. {judul[13]}")
     print(f"5. {judul[14]}")
     
-    pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
+    pilihbuku = input("Masukkan judul Buku yang anda cari: ")
     if pilihbuku == '1':
         buku = '10'
         print(f"Buku        : {judul[10]}")
@@ -166,7 +166,7 @@ elif pilihmenu == '3':
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
     else:
-        print("Masukan inputan dengan benar!")
+        print("Masukkan judul Buku dengan benar!")
 elif pilihmenu == '4':
     print("Pencarian Buku")
     cari_buku = input("Masukkan judul atau pengarang buku yang ingin dicari: ")
@@ -195,12 +195,12 @@ if pilihmenu in ['1', '2', '3', '4']:
             sys.exit("hanya masukan y/n")
 
 
-    jumlah_barang = int(input("masukkan jumlah barang yang dibeli: "))
+    jumlah_barang = int(input("Masukkan jumlah barang yang dibeli: "))
     print("")
     print("")
     print("")
     print("==============================")
-    print("          Store Book          ")
+    print("          STOREBOOK          ")
     print("==============================")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("        Struk Pembelian       ")
@@ -254,7 +254,6 @@ def bayar():
     elif tunai == "Non-Tunai":
         transaksi_cashless()
     else:
-        print("mohon ketik 1 untuk transaksi tunai\n mohon ketik 2 untuk transaksi Non-Tunai")
+        print("Mohon ketik 1 untuk transaksi tunai\nMohon ketik 2 untuk transaksi Non-Tunai")
 
 bayar()
-
