@@ -200,7 +200,9 @@ elif pilihmenu == '4':
             else:
                 sys.exit("buku tidak ada di list")
     else:
-        sys.exit("Buku tidak ditemukan")
+        print("Buku tidak ditemukan\n")
+        os.system('python "c:/Users/LEGION/OneDrive - ypt.or.id/sem2/pemrog1/coba/lisbuku.py"')
+        sys.exit()
 
 
 
@@ -279,4 +281,3 @@ def bayar():
         print("Hanya ketik Tunai atau Non-Tunai")
 
 bayar()
-
