@@ -2,7 +2,7 @@ import os
 import sys
 
 
-print("Selamat datang di Store Book")
+print("Selamat datang di StoreBook")
 print("1. Novel")
 print("2. Komik")
 print("3. Biografi")
@@ -10,7 +10,7 @@ print("4. Search")
 
 pilihmenu = input("Inputkan nomor yang anda butuhkan: ")
 
-judul =["Hello,Cello","Malioboro at Midnight","Kota Para Pecundang","Rumah untuk Alie","Kata Sandi",
+judul =["Hello,Cello","Malioboro at Midnight","Kota Para Pecundang","Rumah untuk Alie","Kata Sandi", 
         "Death Note Short Stories","Akasha Record of Ragnarok 06","One Piece 98","Blue Lock 01","Tokyo Revengers 01",
         "Biografi Politik Habibie","Soekarno: Biografi Singkat 1901-1970","Tan Malaka: Biografi Singkat 1897-1949","History Of Madura","Carok Budaya & Hukum",]
 pengarang=["Nadia Ristivani","Skysphire","Itakrn","Lenn Liu","Dian Yutyaningsih",
@@ -29,6 +29,7 @@ if pilihmenu == '1':
     print(f"5. {judul[4]}")
     
     pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
+        
     if pilihbuku == '1':
         buku = '0'
         print(f"Buku        : {judul[0]}")
@@ -36,6 +37,7 @@ if pilihmenu == '1':
         print(f"Harga       : Rp {harga[0]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
+            
     elif pilihbuku =="2":
         buku = '1'
         print(f"Buku        : {judul[1]}")
@@ -67,6 +69,7 @@ if pilihmenu == '1':
         print(f"Harga       : Rp {harga[4]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
+            
     else:
         sys.exit("Masukkan inputan dengan benar!!!")
 
@@ -79,6 +82,7 @@ elif pilihmenu == '2':
     print(f"5. {judul[9]}")
     
     pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
+        
     if pilihbuku == '1':
         buku = '5'
         print(f"Buku        : {judul[5]}")
@@ -86,6 +90,7 @@ elif pilihmenu == '2':
         print(f"Harga       : Rp {harga[5]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
+            
     elif pilihbuku =="2":
         buku = '6'
         print(f"Buku        : {judul[6]}")
@@ -117,6 +122,7 @@ elif pilihmenu == '2':
         print(f"Harga       : Rp {harga[9]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
+            
     else:
         sys.exit("Masukkan inputan dengan benar!!!")
 elif pilihmenu == '3':
@@ -128,6 +134,7 @@ elif pilihmenu == '3':
     print(f"5. {judul[14]}")
     
     pilihbuku = input("Inputkan nomor yang anda butuhkan: ")
+        
     if pilihbuku == '1':
         buku = '10'
         print(f"Buku        : {judul[10]}")
@@ -135,6 +142,7 @@ elif pilihmenu == '3':
         print(f"Harga       : Rp {harga[10]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
+            
     elif pilihbuku =="2":
         buku = '11'
         print(f"Buku        : {judul[11]}")
@@ -166,6 +174,7 @@ elif pilihmenu == '3':
         print(f"Harga       : Rp {harga[14]}")
 
         belibuku = input("Input Y (beli) dan N (kembali): ")
+            
     else:
         sys.exit("Masukkan inputan dengan benar!!!")
 elif pilihmenu == '4':
@@ -222,7 +231,7 @@ if pilihmenu in ['1', '2', '3', '4']:
     print("")
     print("")
     print("==============================")
-    print("          Store Book          ")
+    print("          StoreBook           ")
     print("==============================")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("        Struk Pembelian       ")
