@@ -227,16 +227,16 @@ else:
     sys.exit("Masukkan pilihan 1-4")
 
 
-    jumlah_barang = int(input("masukkan jumlah barang yang dibeli: "))
-    print("")
-    print("")
-    print("")
-    print("==============================")
-    print("          StoreBook           ")
-    print("==============================")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print("        Struk Pembelian       ")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+jumlah_barang = int(input("masukkan jumlah barang yang dibeli: "))
+print("")
+print("")
+print("")
+print("==============================")
+print("          StoreBook           ")
+print("==============================")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("        Struk Pembelian       ")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
 
 
             
