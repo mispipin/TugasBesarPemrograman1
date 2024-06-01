@@ -190,7 +190,6 @@ elif pilihmenu == '4':
     if len(hasil_pencarian) > 0:
         print("Hasil Pencarian:")
         for i in hasil_pencarian:
-            # print(f"{i+1}. {judul[i]} - {pengarang[i]} (Rp {harga[i]})")
             print(f"Judul      : {judul[i]}")
             print(f"Pengarang  : {pengarang[i]}")
             print(f"Harga      : {harga[i]}")
@@ -224,6 +223,8 @@ if pilihmenu in ['1', '2', '3', '4']:
             sys.exit()
         else:
             sys.exit("hanya masukan y/n")
+else:
+    sys.exit("Masukkan pilihan 1-4")
 
 
     jumlah_barang = int(input("masukkan jumlah barang yang dibeli: "))
