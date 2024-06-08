@@ -227,41 +227,53 @@ else:
     sys.exit("Masukkan pilihan 1-4")
 
 
-jumlah_barang = int(input("Masukkan jumlah barang yang dibeli: "))
-print("")
-print("")
-print("")
-print("==============================")
-print("          STOREBOOK           ")
-print("==============================")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print("        Struk Pembelian       ")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
-
-
-            
-            
-print("Rincian Pembelian:")
-total_harga = 0
-for index, item in enumerate(pembelian):
-    print(f"Judul      : {item['Judul']}")
-    print(f"Pengarang  : {item['Pengarang']}")
-    total_harga += int(item['Harga'].replace("Rp. ", "").replace(".", ""))
-    print(f"Harga      : {total_harga}")
+try:
+    jumlah_barang = int(input("Masukkan jumlah barang yang dibeli: "))
     print("")
-    print(f"Jumlah barang: {jumlah_barang}")
+    print("")
+    print("")
+    print("==============================")
+    print("          STOREBOOK           ")
+    print("==============================")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("        Struk Pembelian       ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+
+
+                
+                
+    print("Rincian Pembelian:")
+    total_harga = 0
+    for index, item in enumerate(pembelian):
+        print(f"Judul      : {item['Judul']}")
+        print(f"Pengarang  : {item['Pengarang']}")
+        total_harga += int(item['Harga'].replace("Rp. ", "").replace(".", ""))
+        print(f"Harga      : {total_harga}")
+        print("")
+        print(f"Jumlah barang: {jumlah_barang}")
+except ValueError:
+    print("Inputkan jumlah barang dengan benar!!!")
+    sys.exit()
 
         
 def transaksi_tunai():
 
     totalHarga = jumlah_barang * total_harga
     print(f"Total Harga: Rp {totalHarga:.2f}")
-    uang_diberikan = int(input("Jumlah uang yang diberikan: "))
+    try:
+        uang_diberikan = int(input("Jumlah uang yang diberikan: "))
+    except ValueError:
+        print("Masukkan jumlah uang dengan benar!!!")
+        sys.exit()
     
     if uang_diberikan < totalHarga:
         print("Uang yang diberikan tidak cukup.")
+        sys.exit()
     elif uang_diberikan == totalHarga:
         print("Uang yang diberikan pas.")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
+        print("Terima kasih sudah Berbelanja \n")
+        sys.exit()
     else:
         kembalian = uang_diberikan - totalHarga
         
@@ -283,9 +295,9 @@ def transaksi_cashless():
 
 def bayar():
     tunai = input("Pembayaran: ")
-    if tunai == "Tunai":
+    if tunai.lower() == "tunai":
         transaksi_tunai()
-    elif tunai == "Non-Tunai":
+    elif tunai.lower == "non-tunai":
         transaksi_cashless()
     else:
         print("Hanya ketik Tunai atau Non-Tunai")
